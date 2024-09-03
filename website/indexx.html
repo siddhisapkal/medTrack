@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPD Management</title>
+</head>
+<body>
+    <h1>WebSocket Test</h1>
+    <button id="sendBtn">Send Message</button>
+    <div id="output"></div>
+
+    <script>
+        const ws = new WebSocket('ws://localhost:8080');
+
+        ws.onopen = () => {
+            console.log('Connected to server');
+        };
+
+        ws.onmessage = (event) => {
+            const output = document.getElementById('output');
+            output.innerHTML += `<p>${event.data}</p>`;
+        };
+
+        document.getElementById('sendBtn').onclick = () => {
+            ws.send('Hello, server!');
+        };
+    </script>
+</body>
+</html>
