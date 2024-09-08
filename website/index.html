@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to MedTrack</title>
+    <title>Dashboard - MedTrack</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -45,11 +45,24 @@
 
         .nav-container {
             display: flex;
-            justify-content: flex-end; /* Align navigation to the right */
+            align-items: center; /* Align items vertically */
             padding: 10px;
             background-color: #FFFFFF; /* White color for the navigation bar */
             box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
             position: relative; /* Not fixed so it scrolls with the content */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-right: auto; /* Pushes the logo to the leftmost side */
+        }
+
+        .logo-container img {
+            width: 70px; /* Larger size for the logo */
+            height: 70px;
+            border-radius: 50%;
+            margin-right: 20px; /* Space between logo and text */
         }
 
         .nav-container a {
@@ -63,22 +76,14 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
+        .nav-container a.active {
+            background-color: #1a4b77; /* Dark blue background when active */
+            color: #FFFFFF; /* White text color when active */
+        }
+
         .nav-container a:hover {
             background-color: #1F316F; /* Dark blue color for hover effect */
             color: #ADD8E6; /* Light blue background color for text on hover */
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            margin-right: 20px; /* Space between logo and navigation items */
-        }
-
-        .logo-container img {
-            width: 50px; /* Adjust size as needed */
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 10px; /* Space between logo and text */
         }
 
         .content {
@@ -116,7 +121,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: brightness(50%); /* Dark filter */
+            filter: brightness(50%); /* Dark filter for images */
             z-index: 1;
         }
 
@@ -130,21 +135,19 @@
         }
 
         .opd-booking {
-            background-image: url('./opd.png'); /* Background image for OPD Booking */
-            background-size: cover;
-            background-position: center;
+            background-image: url('./opdf.png'); /* Background image for OPD Booking */
         }
 
         .bed-booking {
             background-image: url('./bed.png'); /* Background image for Bed Booking */
-            background-size: cover;
-            background-position: center;
         }
 
         .ambulance {
             background-image: url('./ambu.png'); /* Background image for Ambulance */
-            background-size: cover;
-            background-position: center;
+        }
+
+        .medicine-dispensary {
+            background-image: url('./medicine.png'); /* Background image for Medicine Dispensary */
         }
 
         @media (max-width: 768px) {
@@ -157,8 +160,8 @@
             }
 
             .logo-container img {
-                width: 40px; /* Adjust logo size on mobile */
-                height: 40px;
+                width: 50px; /* Adjust logo size on mobile */
+                height: 50px;
             }
         }
     </style>
@@ -177,25 +180,31 @@
         <div class="logo-container">
             <img src="./logoo.png" alt="Logo"> <!-- Logo image -->
         </div>
-        <a href="#home">Home</a>
+        <a href="index.html" class="active">Dashboard</a> <!-- Dashboard is highlighted -->
+        <a href="home.html">Home</a> <!-- Link to Home page -->
+        <!-- Removed OPD Management link -->
         <a href="#about-us">About Us</a>
         <a href="#contact-us">Contact Us</a>
-        <a href="#profile">Profile</a>
+        <a href="profile.html">Profile</a> <!-- Profile link updated to open profile.html -->
     </div>
 
     <!-- Main Content with Blocks -->
     <div class="content">
-        <div class="block opd-booking" id="opd-booking">
-            <img src="./opd.png" alt="OPD Booking"> <!-- Image for OPD section -->
+        <div class="block opd-booking" id="opd-booking" onclick="window.location.href='opd_management.html'">
+            <img src="./opdf.jpg" alt="OPD Booking"> <!-- Updated image for OPD section -->
             <div>OPD Booking</div>
         </div>
-        <div class="block bed-booking" id="bed-booking">
+        <div class="block bed-booking" id="bed-booking" onclick="window.location.href='bed_management.html'">
             <img src="./bed.png" alt="Bed Booking"> <!-- Image for Bed Booking -->
             <div>Bed Booking</div>
         </div>
         <div class="block ambulance" id="ambulance">
             <img src="./ambu.png" alt="Ambulance"> <!-- Image for Ambulance -->
             <div>Ambulance</div>
+        </div>
+        <div class="block medicine-dispensary" id="medicine-dispensary" onclick="window.location.href='medicine_dispensary.html'">
+            <img src="./medicine.png" alt="Medicine Dispensary"> <!-- Image for Medicine Dispensary -->
+            <div>Medicine Dispensary</div>
         </div>
     </div>
 
@@ -215,17 +224,5 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
