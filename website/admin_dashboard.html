@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - MedTrack</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #1A4870;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #19485F;
+        }
+
+        .navbar a {
+            padding: 14px 20px;
+            display: inline-block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            background-color: #81b1c4;
+            color: #19485F;
+        }
+
+        .navbar a.active {
+            background-color: #D9E0A4;
+            color: #19485F;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .admin-panel {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .admin-panel h2 {
+            color: #1A4870;
+            margin-bottom: 20px;
+        }
+
+        .admin-options {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .admin-options .option {
+            background-color: #D9E0A4;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            text-align: center;
+            cursor: pointer;
+            font-size: 18px;
+            color: #19485F;
+        }
+
+        .admin-options .option:hover {
+            background-color: #81b1c4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        Hospital Admin Dashboard
+    </div>
+
+    <div class="navbar">
+        <a href="admin_dashboard.html" class="active">Dashboard</a>
+        <a href="admin_beds.html">Manage Beds</a>
+        <a href="admin_patients.html">Manage Patients</a>
+        <a href="admin_medicine.html">Manage Medicine</a>
+        <a href="admin_profile.html">Profile</a>
+    </div>
+
+    <div class="container">
+        <div class="admin-panel">
+            <h2>Welcome, Admin</h2>
+            <div class="admin-options">
+                <div class="option" onclick="window.location.href='admin_beds.html'">
+                    Manage Beds
+                </div>
+                <div class="option" onclick="window.location.href='admin_patients.html'">
+                    Manage Patients
+                </div>
+                <div class="option" onclick="window.location.href='admin_medicine.html'">
+                    Manage Medicine
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "skilled-sunrise-434318-a0",
+  "private_key_id": "4c672516263b9fc2b5bb3f37107124717d268484",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDSErNU2HJ7Xor1\nF66neQ26BzR42xRpNERTqO4XPxAbBRkISymTTx7qsycrSNZ3Y0G9urjiklLKZyGD\n5IKkfpALWrgeWhkKvUAJZ/Dp3pyHwKHxYf/Dp1r5k7qzyD5QzUuo+lLMj7o6Hh8t\nqITBKNOY8wnVVVxtUNYIqdMP1ofFraMH8MlCOJk6V3em6NZWYNVVjH0jkrNXrhNi\nlhgsyORBO/rTNpciggvjpwfZJBncrVZ2SngkrWV99EwOqPIQaN7eSGpfA/8/NPow\n4FdRU23jjXiEYqzTvI0ekN+pMpr3Kxhmsn4/X7NHlL4k9L65/y6OA9Nf1H80M6ZO\nMwHGs7+nAgMBAAECggEAC5V1ZxR9EkQkhHRXBgFyWijjN1YupMh5i2Vxej2uJ9dF\nn0P0bxzkobYu+ZTizU2KBqohCiQIcFnJ1X8zHFqlmxgDDBrAGRard86lUGLH8ze8\n66sRkpqMCol0uPeDRtWzOjD814PbazCrBnZYRQXOeTd5pNZiqjJ+wuveaW1VKkzE\ncQX6hc/paxZuJut8rSPL0FFU6cIlP13dS82/p/YZ+ew4uOzrN5iysuC5puAdj1Da\nFEeMIz7rXax7S0cA8i0e7baMBurRezaLwVwQrl3ccQNfjwPe6tPQRPxhsbr35zIV\n1seO2JzoJzeyMkoFcCOs/SeMs4sWXMsjb7nvHUozTQKBgQDph2v/4P2O0da45qjV\nmnN6Q00SSQ1vhOwdlR0EVWLF8q/+w84/Cvyf1QZYxwhvfaShm1BK6gWdcT4M2sKI\nQVAgou0KNSAE+vgMecGp81b+OwKzgupMWOFa/m/FpDfFMmojH8jp1MPEk3QNpaH0\nTN9XuurogGgaQOPCZAEZlUgMjQKBgQDmSXuG75kNGaJvhz0LX+LBvoSEJgTVZXgK\nQFjNKirv2LpKig4e42zX/JS4x8RulorkZxBj+ofEIpabl/95dqNC2qPTq0PghrTi\ne3NlzRH/ILu/478aPauk7B9yoYi6S4mSSglgpQuLPKsmcfd2mcS4LNj1zIlEkt1l\n+Qt8+WyCAwKBgQCK1JA3CVmT+1msiKvceLqn97Ss5zMOljYMjCY4+k4DIfjQ+zT0\ns6Jlnq3sPz7bkRU7YesE7kUySS07VR4LBNEO5e0HgXesnkqyl/uy/lA8SXaco3qI\nstoeT17BX5QsLoF8qhu2L1/G0GZQ6qPyaXTpYdzfJd89pFACs5MX03CGzQKBgQCO\nXCrS9ddFs+0oyQ/Bslr5ro85Kk+epAWbQMAkxMaaUv6HCeVEzw8ATpKZ0FTskH/4\nRoZpZ/z6EO/N7B7wtZijwYm5Voy1hlDYGbzy190iPNgT/fSrgihT4exm7tkZYY0A\nNGirqBwEzVJ4h8eVN+XWfVL6UKEjFS9s1JJ3hbHAhQKBgBfbVN5EABeSdwWiqMes\nJl5v29qG+sf0ONPFtH1u8zD6jDLTr/cBPLtmdL76M7pRZkn12vxNEqfS6zRHyDAs\n6Fqqh6hotfH1k+BNKzo5VoDeJDCEOt1R4Iv8EfhTpVbIsKxdG16X1dXy7G3QEl6x\nbxHv64/kj3lVbPxkiEuDjxKe\n-----END PRIVATE KEY-----\n",
+  "client_email": "medtrack-service-account@skilled-sunrise-434318-a0.iam.gserviceaccount.com",
+  "client_id": "110576201039601668892",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/medtrack-service-account%40skilled-sunrise-434318-a0.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

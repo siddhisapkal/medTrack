@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bed Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EDE8F5; /* Very light blue background */
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #3D52A0; /* Dark blue color for the navigation bar */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-right: auto; /* Pushes the logo to the leftmost side */
+        }
+
+        .logo-container img {
+            width: 70px; /* Adjust logo size */
+            height: 70px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .nav-container a {
+            color: #EDE8F5; /* Very light blue text */
+            text-decoration: none;
+            font-size: 18px;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #EDE8F5;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-container a.active {
+            background-color: #7091E6; /* Light blue background when active */
+            color: #FFFFFF; /* White text color when active */
+        }
+
+        .nav-container a:hover {
+            background-color: #8697C4; /* Medium blue color for hover effect */
+            color: #3D52A0; /* Dark blue text on hover */
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #3D52A0; /* Dark blue color */
+        }
+
+        .bed-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .bed-category {
+            background-color: #ADBBDA; /* Soft blue background for boxes */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 350px; /* Adjusted width for a rectangular appearance */
+            height: 200px; /* Adjusted height for a rectangular appearance */
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bed-category:hover {
+            transform: scale(1.05);
+        }
+
+        .bed-category img {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Circular image */
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .bed-category div {
+            position: relative;
+            z-index: 2;
+            color: #3D52A0; /* Dark blue text color */
+            font-weight: bold;
+            font-size: 20px; /* Adjusted text size */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 120px); /* Adjusted height to fit the text below the image */
+            margin-top: 120px; /* Space for the image above */
+        }
+
+        @media (max-width: 600px) {
+            .bed-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <div class="nav-container">
+        <div class="logo-container">
+            <img src="./logoo.png" alt="Logo"> <!-- Logo image -->
+        </div>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="bed_management.html" class="active">Bed Management</a>
+        <a href="profile.html">Profile</a>
+    </div>
+
+    <h1>Bed Management</h1>
+    <div class="bed-container">
+        <!-- Category for General Ward -->
+        <div class="bed-category" onclick="filterBeds('general')">
+            <img src="general.png" alt="General Ward"> <!-- Circular image for General Ward -->
+            <div>General Ward</div>
+        </div>
+
+        <!-- Category for ICU Ward -->
+        <div class="bed-category" onclick="filterBeds('icu')">
+            <img src="ICU.png" alt="ICU Ward"> <!-- Circular image for ICU Ward -->
+            <div>ICU</div>
+        </div>
+
+        <!-- Category for Private Room -->
+        <div class="bed-category" onclick="filterBeds('private')">
+            <img src="private.png" alt="Private Room"> <!-- Circular image for Private Room -->
+            <div>Special Ward</div>
+        </div>
+    </div>
+
+    <script>
+        function filterBeds(category) {
+            // Redirect to the corresponding hospital page based on the category
+            if (category === 'general') {
+                window.location.href = 'general_ward_hospitals.html'; // Change to the correct URL for General Ward hospitals
+            } else if (category === 'icu') {
+                window.location.href = 'icu_hospitals.html'; // Change to the correct URL for ICU hospitals
+            } else if (category === 'private') {
+                window.location.href = 'private_hospitals.html'; // Change to the correct URL for Private Ward hospitals
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+

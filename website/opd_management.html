@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPD Management - MedTrack</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #EDE8F5; /* Very light blue background */
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #3D52A0; /* Dark blue color for the navigation bar */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-right: auto; /* Pushes the logo to the leftmost side */
+        }
+
+        .logo-container img {
+            width: 70px; /* Adjust logo size */
+            height: 70px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .nav-container a {
+            color: #EDE8F5; /* Very light blue text */
+            text-decoration: none;
+            font-size: 18px;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #EDE8F5;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-container a.active {
+            background-color: #7091E6; /* Light blue background when active */
+            color: #FFFFFF; /* White text color when active */
+        }
+
+        .nav-container a:hover {
+            background-color: #8697C4; /* Medium blue color for hover effect */
+            color: #3D52A0; /* Dark blue text on hover */
+        }
+
+        .header {
+            background-color: #3D52A0; /* Dark blue header */
+            color: #FFFFFF; /* White text */
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px; /* Added margin to avoid overlap with taskbar */
+        }
+
+        .filters {
+            margin: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .filters input[type="text"],
+        .filters input[type="date"],
+        .filters input[type="time"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #3D52A0; /* Dark blue border */
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        .filters button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 1px solid #3D52A0; /* Dark blue border */
+            border-radius: 5px;
+            background-color: #3D52A0; /* Dark blue button */
+            color: #FFFFFF;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .filters button:hover {
+            background-color: #163E5A; /* Darker blue on hover */
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            background-color: #ADBBDA; /* Soft blue background for boxes */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+            border-radius: 50%; /* Make images circular */
+            border: 2px solid #3D52A0; /* Optional: Dark blue border around the circle */
+            padding: 10px; /* Optional: Add padding inside the circle */
+            background-color: #F4D9D0; /* Optional: Light background color inside the circle */
+        }
+
+        .box h3 {
+            font-size: 18px;
+            color: #3D52A0; /* Dark blue text */
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            font-size: 14px;
+            color: #333333; /* Darker gray text */
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                width: 100%; /* Full width on smaller screens */
+            }
+
+            .filters {
+                flex-direction: column;
+            }
+
+            .filters input[type="text"],
+            .filters input[type="date"],
+            .filters input[type="time"],
+            .filters button {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <div class="nav-container">
+        <div class="logo-container">
+            <img src="./logoo.png" alt="Logo"> <!-- Logo image -->
+        </div>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="bed_management.html">Bed Management</a>
+        <a href="profile.html">Profile</a>
+        <a href="opd_management.html" class="active">OPD Management</a>
+    </div>
+
+    <div class="header">
+        OPD Management
+    </div>
+
+    <div class="filters">
+        <input type="text" placeholder="Search for departments or services...">
+        <input type="date">
+        <input type="time">
+        <button type="button">Search</button>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="box">
+                <img src="cardio3.png" alt="Cardiology">
+                <h3>Cardiology</h3>
+                <p>Manage appointments for heart-related issues.</p>
+            </div>
+            <div class="box">
+                <img src="ortho.png" alt="Orthopedics">
+                <h3>Orthopedics</h3>
+                <p>Schedule visits for bone and muscle problems.</p>
+            </div>
+            <div class="box">
+                <img src="neuro.png" alt="Neurology">
+                <h3>Neurology</h3>
+                <p>Handle cases related to the nervous system.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="box">
+                <img src="derma.png" alt="Dermatology">
+                <h3>Dermatology</h3>
+                <p>Book appointments for skin conditions.</p>
+            </div>
+            <div class="box">
+                <img src="pedri2.png" alt="Pediatrics">
+                <h3>Pediatrics</h3>
+                <p>Child healthcare management.</p>
+            </div>
+            <div class="box">
+                <img src="psychio.png" alt="Psychiatry">
+                <h3>Psychiatry</h3>
+                <p>Mental health support and therapy sessions.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+

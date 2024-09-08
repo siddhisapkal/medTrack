@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Opinion - MedTrack</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #EDE8F5; /* Very Light Blue */
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #1A4870;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-around;
+            background-color: #FFFFFF;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container a {
+            text-decoration: none;
+            color: #1A4870;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: 1px solid #1A4870;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-container a:hover {
+            background-color: #1A4870;
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .filters {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .filters h2 {
+            color: #1A4870;
+            margin-top: 0;
+        }
+
+        .filters label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        .filters input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #1A4870;
+            border-radius: 5px;
+        }
+
+        .form-container {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .form-container input, .form-container textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #1A4870;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #1A4870;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #0F3050;
+        }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .step {
+            background-color: #FFFFFF;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .step h3 {
+            margin-top: 0;
+            color: #1A4870;
+        }
+
+        .step p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Get A Second Opinion</h1>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-container">
+        <a href="index.html">Dashboard</a>
+        <a href="home.html">Home</a>
+        <!-- <a href="second_opinion.html">Second Opinion</a> -->
+        <a href="#about-us">About Us</a>
+        <a href="#contact-us">Contact Us</a>
+        <a href="profile.html">Profile</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <!-- Filters Section -->
+        <div class="filters">
+            <h2>Search for Hospitals</h2>
+            <label for="hospital-search"></label>
+            <input type="text" id="hospital-search" placeholder="Enter hospital name...">
+        </div>
+
+        <!-- Request a Callback -->
+        <div class="form-container">
+            <h2>Request a Callback</h2>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                
+                <label for="mobile">Mobile number *</label>
+                <input type="text" id="mobile" name="mobile" placeholder="Enter Your Mobile Number" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email">
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Enter Your Message"></textarea>
+                
+                <label for="prescription">Upload Prescription (accepted only pdf, docx)</label>
+                <input type="file" id="prescription" name="prescription" accept=".pdf,.docx">
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- About Second Opinion -->
+        <div class="section">
+            <h2>About Second Opinion</h2>
+            <p>Prioritizing your health means understanding all aspects of the condition and proposed treatment before making any decisions. If you're concerned about interpreting your medical reports accurately, we provide a second opinion service that can help clarify your treatment options.</p>
+        </div>
+
+        <!-- How You Can Avail -->
+        <div class="section">
+            <h2>Here’s How You Can Avail A Second Opinion At MedTrack</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>Step 1: Register</h3>
+                    <p>Register by entering the caregiver or patient details. This will create your profile in our system.</p>
+                </div>
+                <div class="step">
+                    <h3>Step 2: Submit Medical Report</h3>
+                    <p>Scan the reports and upload them. Connect with us if you encounter any issues related to registration or uploading.</p>
+                </div>
+                <div class="step">
+                    <h3>Step 3: Get Personalized Plans in 2 Days</h3>
+                    <p>Each case will be mapped to a specialist, who will review the case reports and provide personalized advice within 2 days.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
